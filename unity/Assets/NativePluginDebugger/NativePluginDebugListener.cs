@@ -9,7 +9,7 @@ public static class NativePluginDebugListener
 {
     enum CustomLogType { Log, Warning, Error }
     
-    delegate void DebugCallback(IntPtr request, int logType, int size);
+    delegate void DebugCallback(IntPtr request, CustomLogType logType, int size);
     
 #if UNITY_EDITOR_OSX
     // TODO: Replace your plugin name
@@ -35,12 +35,12 @@ public static class NativePluginDebugListener
     }
 
     [AOT.MonoPInvokeCallback(typeof(DebugCallback))]
-    static void OnDebugCallback(IntPtr request, int logType, int size)
+    static void OnDebugCallback(IntPtr request, CustomLogType logType, int size)
     {
         string logMsg = Marshal.PtrToStringAnsi(request, size);
         logMsg = $"<color=green>NativeLog:</color> {logMsg}";
 
-        switch ((CustomLogType)logType)
+        switch (logType)
         {
             case CustomLogType.Warning:
                 Debug.LogWarning(logMsg);

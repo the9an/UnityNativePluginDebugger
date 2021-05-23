@@ -17,14 +17,18 @@
 // For Unity Windows, use
 //#define DllExport __declspec(dllexport)
 
+enum class LogType {
+    Log = 0,
+    Warning,
+    Error
+};
+
 extern "C"
 {
-    typedef void(*CallbackFunc)(const char* message, int logType, int size);
+    typedef void(*CallbackFunc)(const char* message, LogType logType, int size);
     static CallbackFunc registedCallback = nullptr;
     DllExport void RegisterDebugCallback(CallbackFunc callback);
 }
-
-enum class LogType { Log, Warning, Error };
 
 class  Debug
 {

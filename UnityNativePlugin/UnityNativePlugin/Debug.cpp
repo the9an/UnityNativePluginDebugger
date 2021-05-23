@@ -8,7 +8,7 @@
 
 extern "C"
 {
-    DllExport void RegisterDebugCallback(CallBackFunc callback) {
+    DllExport void RegisterDebugCallback(CallbackFunc callback) {
         registedCallback = callback;
     }
 }
@@ -29,29 +29,29 @@ const char* Debug::ConvertMessage(const std::string message)
 
 void  Debug::Log(const char* message) {
     if (registedCallback != nullptr)
-        registedCallback(message, (int)LogType::Log, (int)strlen(message));
+        registedCallback(message, LogType::Log, (int)strlen(message));
 }
 void  Debug::Log(const char message) {
-    Debug::LogError(Debug::ConvertMessage(message));
+    Debug::Log(Debug::ConvertMessage(message));
 }
 void  Debug::Log(const std::string message) {
-    Debug::LogError(Debug::ConvertMessage(message));
+    Debug::Log(Debug::ConvertMessage(message));
 }
 
 void  Debug::LogWarning(const char* message) {
     if (registedCallback != nullptr)
-        registedCallback(message, (int)LogType::Warning, (int)strlen(message));
+        registedCallback(message, LogType::Warning, (int)strlen(message));
 }
 void  Debug::LogWarning(const char message) {
-    Debug::LogError(Debug::ConvertMessage(message));
+    Debug::LogWarning(Debug::ConvertMessage(message));
 }
 void  Debug::LogWarning(const std::string message) {
-    Debug::LogError(Debug::ConvertMessage(message));
+    Debug::LogWarning(Debug::ConvertMessage(message));
 }
 
 void  Debug::LogError(const char* message) {
     if (registedCallback != nullptr)
-        registedCallback(message, (int)LogType::Error, (int)strlen(message));
+        registedCallback(message, LogType::Error, (int)strlen(message));
 }
 void  Debug::LogError(const char message) {
     Debug::LogError(Debug::ConvertMessage(message));
