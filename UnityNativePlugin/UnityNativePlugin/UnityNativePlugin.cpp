@@ -6,12 +6,12 @@
 //
 
 #include "UnityNativePlugin.hpp"
-#include "Debug.hpp"
+#include "Debug.h"
 
 extern "C"
 {
     DllExport void TestLog()
     {
-        Debug::Log("TEST");
+        UnityEngine::Debug::Log("TEST");
     }
 }

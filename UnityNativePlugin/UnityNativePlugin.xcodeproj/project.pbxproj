@@ -28,11 +28,12 @@
 /* Begin PBXFileReference section */
 		147828282653D391007F2C94 /* UnityNativePluginMac.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UnityNativePluginMac.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		1478282B2653D391007F2C94 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		147828332653D3BE007F2C94 /* Debug.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Debug.hpp; sourceTree = "<group>"; };
+		147828332653D3BE007F2C94 /* Debug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Debug.h; sourceTree = "<group>"; };
 		147828342653D3BE007F2C94 /* Debug.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Debug.cpp; sourceTree = "<group>"; };
 		147828372653D3F8007F2C94 /* UnityNativePlugin.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = UnityNativePlugin.cpp; sourceTree = "<group>"; };
 		147828382653D3F8007F2C94 /* UnityNativePlugin.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = UnityNativePlugin.hpp; sourceTree = "<group>"; };
 		147828702653DE41007F2C94 /* libUnityNativePlugin.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libUnityNativePlugin.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		149D7F21268C07190015EDFF /* Defines.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Defines.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,11 +74,12 @@
 		1478282A2653D391007F2C94 /* UnityNativePlugin */ = {
 			isa = PBXGroup;
 			children = (
-				147828332653D3BE007F2C94 /* Debug.hpp */,
+				147828332653D3BE007F2C94 /* Debug.h */,
 				147828342653D3BE007F2C94 /* Debug.cpp */,
 				1478282B2653D391007F2C94 /* Info.plist */,
 				147828372653D3F8007F2C94 /* UnityNativePlugin.cpp */,
 				147828382653D3F8007F2C94 /* UnityNativePlugin.hpp */,
+				149D7F21268C07190015EDFF /* Defines.h */,
 			);
 			path = UnityNativePlugin;
 			sourceTree = "<group>";
